@@ -269,7 +269,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                     Download Video Tutorial
                   </button>
                   <button
-                    onClick={() => handleDownloadClick("chemical")}
+                    onClick={() => handleDownloadClick("chemicals")}
                     className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer"
                   >
                     <Download size={18} /> Download Chemicals/Measurement

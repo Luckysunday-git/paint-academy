@@ -117,14 +117,14 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
           <a
             href="#paintTypes"
-            className="bg-white text-yellow-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-100 transition"
+            className="bg-white text-yellow-600 font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-100 transition active:bg-yellow-300"
           >
             Explore Paint Videos
           </a>
 
           <button
             onClick={handleCertificateClick}
-            className="bg-yellow-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-800 transition cursor-pointer"
+            className="bg-yellow-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-yellow-800 transition cursor-pointer active:bg-yellow-600"
           >
             Download Certificate
           </button>

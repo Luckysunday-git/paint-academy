@@ -366,7 +366,7 @@ export default function PaintTypes({ searchTerm = "" }) {
 
                 <button
                   type="submit"
-                  className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg w-full cursor-pointer animate-slideDown"
+                  className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg w-full cursor-pointer animate-slideDown active:bg-yellow-500"
                 >
                   Continue
                 </button>
@@ -402,7 +402,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 </div>
                 <button
                   onClick={triggerFakeFileDownload}
-                  className="flex items-center font-semibold gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg mx-auto cursor-pointer"
+                  className="flex items-center font-semibold gap-2 bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg mx-auto cursor-pointer active:bg-green-400"
                 >
                   <Download size={18} /> Download Now
                 </button>
@@ -433,7 +433,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 </p>
                 <button
                   onClick={handlePaystackPayment}
-                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg animate-boun cursor-pointer"
+                  className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-3 rounded-lg animate-boun cursor-pointer active:bg-amber-400"
                 >
                   Pay Now 💳
                 </button>

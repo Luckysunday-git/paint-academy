@@ -217,7 +217,7 @@ const Hero = () => {
 
               <button
                 type="submit"
-                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold w-full cursor-pointer"
+                className="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold w-full cursor-pointer active:bg-yellow-500"
               >
                 Continue
               </button>
@@ -245,7 +245,7 @@ const Hero = () => {
             <p className="mb-4">✅</p>
             <button
               onClick={handleDownloadClick}
-              className="bg-green-500 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer"
+              className="bg-green-500 hover:bg-yellow-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer active:bg-green-400"
             >
               Download Now
             </button>
@@ -286,7 +286,7 @@ const Hero = () => {
             </p>
             <button
               onClick={handlePaystackPayment}
-              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer"
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer active:bg-amber-400"
             >
               Pay Now 💳
             </button>

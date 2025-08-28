@@ -19,9 +19,7 @@ function App() {
         <section id="hero">
           <Hero />
         </section>
-        <section id="about">
-          <About />
-        </section>
+
         <section id="paintTypes">
           <PaintTypes searchTerm={searchTerm} />
         </section>
@@ -30,6 +28,9 @@ function App() {
         </section>
         <section id="paint-materials">
           <PaintMaterials />
+        </section>
+        <section id="about">
+          <About />
         </section>
         <section id="contact">
           <Contact />

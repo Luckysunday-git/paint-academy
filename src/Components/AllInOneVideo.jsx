@@ -397,7 +397,7 @@ const AllInOneVideos = () => {
 
             <button
               onClick={() => openPanel(video)}
-              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium transition cursor-pointer"
+              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium transition cursor-pointer active:bg-yellow-400"
             >
               <Download size={16} /> {isPaid ? "Re-Download" : "Download"}
             </button>

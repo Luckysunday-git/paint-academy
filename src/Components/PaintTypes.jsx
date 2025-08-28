@@ -228,7 +228,7 @@ export default function PaintTypes({ searchTerm = "" }) {
             </ul>
             <button
               onClick={() => openPanel(paint)}
-              className="flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium w-full cursor-pointer"
+              className="flex items-center justify-center gap-2 bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md font-medium w-full cursor-pointer active:bg-yellow-400"
             >
               <Download size={16} /> Download
             </button>

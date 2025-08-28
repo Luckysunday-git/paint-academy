@@ -263,20 +263,20 @@ export default function PaintTypes({ searchTerm = "" }) {
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={() => handleDownloadClick("video")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer"
+                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
                   >
                     <Download size={18} />
                     Download Video Tutorial
                   </button>
                   <button
                     onClick={() => handleDownloadClick("chemicals")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer"
+                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
                   >
                     <Download size={18} /> Download Chemicals/Measurement
                   </button>
                   <button
                     onClick={() => handleDownloadClick("certificate")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer"
+                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
                   >
                     <Download size={18} />
                     Download Certificate

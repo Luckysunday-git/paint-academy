@@ -39,15 +39,7 @@ const Navbar = ({ onSearch }) => {
             Home
           </a>
         </li>
-        <li>
-          <a
-            href="#about"
-            onClick={handleNavClick}
-            className="hover:text-yellow-400 transition"
-          >
-            About
-          </a>
-        </li>
+
         <li>
           <a
             href="#paintTypes"
@@ -64,6 +56,15 @@ const Navbar = ({ onSearch }) => {
             className="hover:text-yellow-400 transition"
           >
             All-in-1 Videos
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            onClick={handleNavClick}
+            className="hover:text-yellow-400 transition"
+          >
+            About
           </a>
         </li>
         <li>

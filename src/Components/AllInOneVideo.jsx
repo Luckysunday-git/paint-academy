@@ -449,7 +449,7 @@ const AllInOneVideos = () => {
                       }, 2000);
                     }, 2000);
                   }}
-                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer"
+                  className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer active:bg-green-500"
                 >
                   Download Now
                 </button>
@@ -459,7 +459,7 @@ const AllInOneVideos = () => {
             {sending && (
               <div className="flex flex-col items-center justify-center py-6">
                 <Loader2
-                  className="animate-spin text-blue-600 mt-1"
+                  className="animate-spin text-green-600 mt-1"
                   size={40}
                 />
                 <p className="text-gray-600 mt-3">Sending your message...</p>

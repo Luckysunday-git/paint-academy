@@ -100,14 +100,14 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen flex items-center justify-center text-center bg-gradient-to-r from-yellow-500 to-yellow-400 text-white"
+      className="h-screen flex items-center justify-center text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-white"
     >
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           Welcome to Paint Academy
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          Learn everything about Paint Production for – from{" "}
+          Learn everything about Paint Production – from{" "}
           <span className="font-semibold">P.O.P Paints</span> to{" "}
           <span className="font-semibold">Stucco Paint</span>. Get step-by-step
           videos, mentorship, colour formulation, and business training to
@@ -136,7 +136,7 @@ const Hero = () => {
         <div className="fixed inset-0 bg-yellow-500 bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white rounded-lg shadow-lg w-80 p-6 flex flex-col items-center">
             <Loader2 className="animate-spin text-yellow-500" size={40} />
-            <p className="text-gray-700 mt-4">Processing certificate...</p>
+            <p className="text-gray-700 mt-4">Processing your certificate...</p>
           </div>
         </div>
       )}
@@ -151,15 +151,15 @@ const Hero = () => {
             >
               <X size={20} />
             </button>
-            <h4 className="text-xl mb-4 italic">
+            <h3 className="text-xl mb-4 italic">
               Fill your Certificate Info below as you want it to appear after
               downloading.
-            </h4>
+            </h3>
 
             <form onSubmit={handleFormSubmit} className="space-y-2">
               <input
                 type="text"
-                placeholder="Full Name"
+                placeholder="Your full Name"
                 value={formData.fullName}
                 onChange={(e) =>
                   setFormData({ ...formData, fullName: e.target.value })
@@ -169,7 +169,7 @@ const Hero = () => {
               />
               <input
                 type="text"
-                placeholder="Training / Course Title"
+                placeholder="Training received e.g Paint Production"
                 value={formData.course}
                 onChange={(e) =>
                   setFormData({ ...formData, course: e.target.value })
@@ -179,7 +179,7 @@ const Hero = () => {
               />
               <input
                 type="text"
-                placeholder="Training Provider / Institution"
+                placeholder="Training Provider e.g Paint Academy"
                 value={formData.provider}
                 onChange={(e) =>
                   setFormData({ ...formData, provider: e.target.value })
@@ -189,7 +189,7 @@ const Hero = () => {
               />
               <input
                 type="text"
-                placeholder="Duration (e.g. 3 days, 40 hours)"
+                placeholder="Duration (e.g. 2 weeks)"
                 value={formData.duration}
                 onChange={(e) =>
                   setFormData({ ...formData, duration: e.target.value })
@@ -280,8 +280,7 @@ const Hero = () => {
               ❌ Oops! Download was disabled. We noticed you haven't paid for
               your certificate.
               <p className="text-sm italic mt-2 text-black">
-                Downloads are only enabled for users who have paid for their
-                certificate.
+                Downloads are only enabled for users who have paid for theirs.
               </p>
             </p>
             <button

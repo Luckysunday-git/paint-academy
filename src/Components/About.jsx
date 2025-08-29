@@ -11,11 +11,11 @@ const About = () => {
       }}
     >
       {/* Overlay for better readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div className="absolute inset-0 bg-gray-100 bg-opacity-60"></div>
 
       {/* Content */}
-      <div className="relative max-w-4xl mx-auto px-6 text-white">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">About Us</h2>
+      <div className="relative max-w-4xl mx-auto px-6 text-black">
+        <h2 className="text-3xl md:text-3xl font-bold mb-6">About Us</h2>
         <p className="text-lg md:text-xl leading-relaxed">
           Welcome to{" "}
           <span className="font-semibold text-yellow-400">Paint Academy</span>,
@@ -23,7 +23,7 @@ const About = () => {
           chemicals, and applications.
           <br />
           <br />
-          Our mission is to empower individuals and businesses with the right
+          Our mission is to empower individuals and businesses with the right{" "}
           knowledge to create high-quality, durable, and beautiful paints.
           <br />
           <br />

@@ -160,7 +160,7 @@ export default function PaintTypes({ searchTerm = "" }) {
             type: "application/pdf",
           }
         );
-        fileName = "paint_chemicals_measurement.pdf";
+        fileName = `${activePaint.name}_chemicals_measurement.pdf`;
       }
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
@@ -263,20 +263,20 @@ export default function PaintTypes({ searchTerm = "" }) {
                 <div className="flex flex-col gap-3">
                   <button
                     onClick={() => handleDownloadClick("video")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
+                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400 font-semibold text-sm"
                   >
                     <Download size={18} />
                     Download Video Tutorial
                   </button>
                   <button
                     onClick={() => handleDownloadClick("chemicals")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
+                    className="flex items-center gap-2 py-2 px-3 font-semibold text-sm bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
                   >
                     <Download size={18} /> Download Chemicals/Measurement
                   </button>
                   <button
                     onClick={() => handleDownloadClick("certificate")}
-                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400"
+                    className="flex items-center gap-2 py-2 px-3 bg-yellow-100 hover:bg-yellow-200 rounded-md cursor-pointer active:bg-yellow-400 font-semibold text-sm"
                   >
                     <Download size={18} />
                     Download Certificate
@@ -298,7 +298,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 {/* Full Name */}
                 <input
                   type="text"
-                  placeholder="Full Name"
+                  placeholder="Your full Name"
                   value={formData.fullName}
                   onChange={(e) =>
                     setFormData({ ...formData, fullName: e.target.value })
@@ -310,7 +310,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 {/* Training / Course Title */}
                 <input
                   type="text"
-                  placeholder="Training / Course Title"
+                  placeholder="Training name e.g Paint Production"
                   value={formData.course}
                   onChange={(e) =>
                     setFormData({ ...formData, course: e.target.value })
@@ -334,7 +334,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 {/* Duration */}
                 <input
                   type="text"
-                  placeholder="Duration (e.g. 3 days, 40 hours)"
+                  placeholder="Duration (e.g. 2 weeks)"
                   value={formData.duration}
                   onChange={(e) =>
                     setFormData({ ...formData, duration: e.target.value })
@@ -380,7 +380,25 @@ export default function PaintTypes({ searchTerm = "" }) {
                   size={28}
                   className="animate-spin text-green-500 mb-2"
                 />
-                <p className="text-gray-700">Preparing your file...</p>
+                {selectedType === "certificate" ? (
+                  <p className="text-gray-700">
+                    Processing your certificate...
+                  </p>
+                ) : (
+                  ""
+                )}
+                {selectedType === "chemicals" ? (
+                  <p className="text-gray-700">
+                    Fetching chemicals/measurement...
+                  </p>
+                ) : (
+                  ""
+                )}
+                {selectedType === "video" ? (
+                  <p className="text-gray-700">Processing your video...</p>
+                ) : (
+                  ""
+                )}
               </div>
             )}
 
@@ -390,11 +408,26 @@ export default function PaintTypes({ searchTerm = "" }) {
               <div className="text-center">
                 <div className="text-green-700 mb-3 font-bold italic">
                   {selectedType === "certificate"
-                    ? `${`Your Certificate is ready`} ✅ `
-                    : `${`Your File is ready`} ✅`}
+                    ? "Your Certificate is ready ✅ "
+                    : ""}
                   {selectedType === "certificate" ? (
                     <p className=" italic text-green-700 mb-1 text-sm font-normal">
-                      Other basic information is added !{" "}
+                      Other basic information is added{" "}
+                    </p>
+                  ) : (
+                    ""
+                  )}
+
+                  {selectedType === "chemicals" ? (
+                    <p className=" text-green-700 mb-1 font-bold italic">
+                      Chemicals/Measurement is ready ✅
+                    </p>
+                  ) : (
+                    ""
+                  )}
+                  {selectedType === "video" ? (
+                    <p className=" italic text-green-700 mb-1 font-bold">
+                      Your video is ready ✅
                     </p>
                   ) : (
                     ""
@@ -416,7 +449,23 @@ export default function PaintTypes({ searchTerm = "" }) {
                   size={28}
                   className="animate-spin text-green-500 mb-2"
                 />
-                <p className="text-gray-700">Downloading file...</p>
+                {selectedType === "certificate" ? (
+                  <p className="text-gray-700">
+                    Downloading your certificate...
+                  </p>
+                ) : (
+                  ""
+                )}
+                {selectedType === "chemicals" ? (
+                  <p className="text-gray-700">Downloading chemicals/mst...</p>
+                ) : (
+                  ""
+                )}
+                {selectedType === "video" ? (
+                  <p className="text-gray-700">Downloading your video...</p>
+                ) : (
+                  ""
+                )}
               </div>
             )}
 
@@ -427,8 +476,8 @@ export default function PaintTypes({ searchTerm = "" }) {
                   ❌ Oops! Your download was interrupted. It seems you haven't
                   paid for your certificate.
                   <p className="text-sm italic mt-2 text-black">
-                    Downloads are only enabled for users who have paid for their
-                    certificate.
+                    Downloads are only enabled for users who have paid for
+                    theirs.
                   </p>
                 </p>
                 <button

@@ -254,9 +254,22 @@ import { X, Loader2, Download } from "lucide-react";
 
 const videos = [
   { title: "Colour Matching A-Z", url: "mov_bbb.mp4" },
-  { title: "Using Colour Charts & Codes", url: "portfolio.mp4" },
   {
-    title: "Identifying Paint Chemicals",
+    title: "Quick Formula to get any colour",
+    url: "https://www.youtube.com/embed/tgbNymZ7vqY",
+  },
+  { title: "How to use Colour Charts & Codes", url: "portfolio.mp4" },
+  {
+    title: "How to start paint business",
+    url: "https://www.youtube.com/embed/tgbNymZ7vqY",
+  },
+  {
+    title: "How to market your paint",
+    url: "https://www.youtube.com/embed/tgbNymZ7vqY",
+  },
+
+  {
+    title: "How to 10x your profit in paint business",
     url: "https://www.youtube.com/embed/tgbNymZ7vqY",
   },
 ];
@@ -361,7 +374,7 @@ const AllInOneVideos = () => {
         {videos.map((video, i) => (
           <div
             key={i}
-            className="bg-gray-100 shadow-md rounded-lg p-4 relative"
+            className="bg-gray-100 shadow-md rounded-lg p-4 relative hover:scale-105 transition"
           >
             <h3 className="font-semibold mb-2">{video.title}</h3>
 

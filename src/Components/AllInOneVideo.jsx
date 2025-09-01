@@ -421,7 +421,7 @@ const AllInOneVideos = () => {
       {/* Panel */}
       {activeVideo && (
         <div className="fixed inset-0 bg-yellow-500 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg shadow-lg max-w-sm w-full p-6 relative animate-slideUp">
+          <div className="bg-white rounded-lg shadow-lg max-w-sm w-full p-6 relative animate-slideUp mx-4">
             <button
               onClick={closePanel}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
@@ -435,7 +435,7 @@ const AllInOneVideos = () => {
 
             {loading && (
               <div className="flex flex-col items-center justify-center">
-                <Loader2 className="animate-spin text-yellow-500" size={40} />
+                <Loader2 className="animate-spin text-green-500" size={40} />
                 <p className="text-gray-600 mt-1">
                   Processing your video file...
                 </p>
@@ -444,7 +444,7 @@ const AllInOneVideos = () => {
 
             {readyToDownload && !fetching && !showPayment && !sending && (
               <div className="text-center">
-                <p className="text-green-700 mb-6 font-semibold italic">
+                <p className="text-green-700 mb-3 font-semibold italic">
                   Your video is ready ✅
                 </p>
                 <button
@@ -475,7 +475,7 @@ const AllInOneVideos = () => {
                   className="animate-spin text-green-600 mt-1"
                   size={40}
                 />
-                <p className="text-gray-600 mt-3">Sending your message...</p>
+                <p className="text-gray-600 mt-3">Initializing...</p>
               </div>
             )}
 
@@ -501,7 +501,7 @@ const AllInOneVideos = () => {
                       onClick={() =>
                         handlePaystackPayment(() => setIsPaid(true))
                       }
-                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer"
+                      className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer active:bg-yellow-400"
                     >
                       Pay Now 💳
                     </button>
@@ -521,70 +521,3 @@ const AllInOneVideos = () => {
 };
 
 export default AllInOneVideos;
-
-// export default AllInOneVideos;
-
-// import React, { useState } from "react";
-
-// const AllInOneVideos = ({ videos, isPaid }) => {
-//   const [tooltip, setTooltip] = useState(null);
-
-//   return (
-//     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-//       {videos.map((video, i) => (
-//         <div
-//           key={i}
-//           className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition relative"
-//         >
-//           <div className="relative w-full h-48 mb-3">
-//             {video.url.includes("youtube.com") ? (
-//               <iframe
-//                 className={`w-full h-full rounded ${
-//                   isPaid ? "pointer-events-auto" : "pointer-events-none"
-//                 }`}
-//                 src={
-//                   isPaid
-//                     ? `${video.url}?controls=1&modestbranding=1&autoplay=0`
-//                     : `${video.url}?controls=0&modestbranding=1&disablekb=1&autoplay=0`
-//                 }
-//                 title={video.title}
-//                 allowFullScreen={isPaid}
-//               ></iframe>
-//             ) : (
-//               <video
-//                 className="w-full h-full rounded"
-//                 controls={isPaid}
-//                 muted
-//                 playsInline
-//               >
-//                 <source src={video.url} type="video/mp4" />
-//                 Your browser does not support the video tag.
-//               </video>
-//             )}
-
-//             {!isPaid && (
-//               <div
-//                 onClick={() => setTooltip(i)}
-//                 className="absolute inset-0 bg-black/40 flex items-center justify-center text-white text-center text-sm px-4 cursor-pointer rounded"
-//               ></div>
-//             )}
-//           </div>
-
-//           <h3 className="font-semibold text-lg text-gray-800">{video.title}</h3>
-//           <p className="text-sm text-gray-500">{video.description}</p>
-
-//           {/* Tooltip for locked content */}
-//           {tooltip === i && !isPaid && (
-//             <div className="absolute inset-0 flex items-center justify-center">
-//               <div className="bg-yellow-500 text-white px-4 py-2 rounded shadow">
-//                 Please purchase to unlock this video
-//               </div>
-//             </div>
-//           )}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default AllInOneVideos;

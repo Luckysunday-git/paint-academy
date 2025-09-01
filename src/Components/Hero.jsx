@@ -396,7 +396,7 @@ const Hero = () => {
       const handler = window.PaystackPop.setup({
         key: "pk_live_f1cd72816e1e7939f2026803b200eb1f6ac00c1b", // Replace with your Paystack public key
         email: paymentData.email, // dynamic email
-        amount: 300000, // Amount in kobo (₦3000)
+        amount: 200000, // Amount in kobo (₦3000)
         currency: "NGN",
         ref: "PS_" + Math.floor(Math.random() * 1000000000 + 1),
         metadata: {
@@ -650,7 +650,7 @@ const Hero = () => {
               />
               <input
                 type="Number"
-                placeholder="₦3000 (Read only)"
+                placeholder="₦2000 (Read only)"
                 value={paymentData.amount}
                 onChange={(e) =>
                   setPaymentData({ ...paymentData, amount: e.target.value })

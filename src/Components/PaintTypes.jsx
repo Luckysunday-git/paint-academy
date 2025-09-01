@@ -188,7 +188,7 @@ export default function PaintTypes({ searchTerm = "" }) {
     const handler = window.PaystackPop.setup({
       key: "pk_live_f1cd72816e1e7939f2026803b200eb1f6ac00c1b",
       email: "user@example.com",
-      amount: 300000,
+      amount: 200000,
       currency: "NGN",
       ref: "PS_" + Math.floor(Math.random() * 1000000000 + 1),
       callback: (r) => alert("Payment successful! Ref: " + r.reference),
@@ -487,8 +487,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                   ❌ Oops! Your download was interrupted. It seems you haven't
                   paid for your certificate.
                   <p className="text-sm italic mt-2 text-black">
-                    Downloads are only enabled for users who have paid for
-                    theirs.
+                    Downloads are only enabled for users who have paid.
                   </p>
                 </p>
                 <button

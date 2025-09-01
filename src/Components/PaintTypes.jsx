@@ -84,6 +84,17 @@ export default function PaintTypes({ searchTerm = "" }) {
     certNumber: "",
   });
 
+  const [certiNumber, setCertiNumber] = useState(
+    Math.floor(Math.random() * 1000003 + 1)
+  );
+
+  const [paymentData, setPaymentData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    amount: "",
+  });
+
   useEffect(() => setFilter(searchTerm), [searchTerm]);
 
   const resetStates = () => {
@@ -239,7 +250,7 @@ export default function PaintTypes({ searchTerm = "" }) {
       {/* Popup Panel */}
       {activePaint && (
         <div className="fixed inset-0 bg-yellow-500 bg-opacity-50 flex justify-center items-center z-50 animate-slideDown">
-          <div className="bg-white rounded-lg shadow-lg w-96 p-6 relative ">
+          <div className="bg-white rounded-lg shadow-lg w-96 p-6 relative mx-4">
             <button
               onClick={closePanel}
               className="absolute top-3 right-3 text-gray-500 hover:text-gray-800 hover:bg-red-500"
@@ -288,7 +299,7 @@ export default function PaintTypes({ searchTerm = "" }) {
             {showForm && (
               <form
                 onSubmit={handleFormSubmit}
-                className="space-y-1 animate-slideDown"
+                className="space-y-2 animate-slideDown"
               >
                 <p className="text-sm mb-3 italic text-gray-700 font-semibold">
                   Fill your certificate info below as you want it to appear
@@ -310,7 +321,7 @@ export default function PaintTypes({ searchTerm = "" }) {
                 {/* Training / Course Title */}
                 <input
                   type="text"
-                  placeholder="Training name e.g Paint Production"
+                  placeholder="Training received e.g Paint Production"
                   value={formData.course}
                   onChange={(e) =>
                     setFormData({ ...formData, course: e.target.value })
@@ -353,15 +364,15 @@ export default function PaintTypes({ searchTerm = "" }) {
                   className="w-full border rounded-lg px-3 py-2  focus:ring-2 focus:ring-yellow-400 outline-none"
                 />
 
-                {/* Certificate Number (optional) */}
                 <input
                   type="text"
-                  placeholder="Certificate Number (optional)"
+                  placeholder={`Cert.No: ${certiNumber}/Paint/Academy`}
+                  disabled
                   value={formData.certNumber}
                   onChange={(e) =>
                     setFormData({ ...formData, certNumber: e.target.value })
                   }
-                  className="w-full border rounded-lg px-3 py-2  focus:ring-2 focus:ring-yellow-400 outline-none"
+                  className="w-full border rounded-lg px-3 py-2 focus:ring-2 focus:ring-yellow-400 outline-none bg-gray-200"
                 />
 
                 <button

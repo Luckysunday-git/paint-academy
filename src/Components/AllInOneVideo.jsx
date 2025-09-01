@@ -302,7 +302,7 @@ const handlePaystackPayment = async (onSuccess) => {
   const handler = window.PaystackPop.setup({
     key: "pk_live_f1cd72816e1e7939f2026803b200eb1f6ac00c1b", // Replace with your Paystack public key
     email: "user@example.com",
-    amount: 300000, // in kobo
+    amount: 200000, // in kobo
     currency: "NGN",
     ref: "PS_" + Math.floor(Math.random() * 1000000000 + 1),
     callback: (response) => {
@@ -459,8 +459,8 @@ const AllInOneVideos = () => {
                         simulateDownload();
                         setFetching(false);
                         setShowPayment(true);
-                      }, 2000);
-                    }, 2000);
+                      }, 1500);
+                    }, 1500);
                   }}
                   className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg shadow-md font-semibold cursor-pointer active:bg-green-500"
                 >
